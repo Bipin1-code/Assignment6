@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="noteMaker.css">
+    <title>Note Maker App</title>
+</head>
+
+<body>
+    <header>
+        <h1>📝 My Notes</h1>
+    </header>
+    
+    <main>
+        <section class="note-container">
+            <input type="text" id="noteTitle" placeholder="Note Title">
+            <textarea id="noteContent" placeholder="Note Content"></textarea>
+            <button onclick="saveNote()">Save Note</button>
+        </section>
+
+        <section>
+            <h2>Saved Notes</h2>
+            <ul id="notesList" class="notes-list"></ul>
+        </section>
+    </main>
+
+    <div id="viewNoteScreen" class="view-note-screen">
+        <nav>
+            <button onclick="editNote()">Edit</button>
+            <button onclick="deleteNote()">Delete</button>
+            <button onclick="closeView()">Close</button>
+        </nav>
+        <h3 id="viewNoteTitle"></h3>
+        <p id="viewNoteContent"></p>
+    </div>
+    <script src="noteMaker.js"></script>
+    
+</body>
+
+</html>
